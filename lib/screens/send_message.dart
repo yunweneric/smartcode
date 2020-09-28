@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Signin extends StatelessWidget {
+class SendMessage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Signin"),),
+      body: Center(
+        child: Text("Send Message"),
+      ),
     );
   }
 }
