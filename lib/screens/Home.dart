@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:smartcode/shared/constant.dart';
 
@@ -11,7 +10,7 @@ class Home extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: Text("SCHOLAR"),
       ),
-     /*  endDrawer: Drawer(
+      /*  endDrawer: Drawer(
         child: DrawerHeader(
           child: Column(
             children: [
@@ -105,7 +104,7 @@ class Home extends StatelessWidget {
                           color: blueColor,
                           boxShadow: [
                             BoxShadow(
-                               color: shadowColor.withOpacity(0.8),
+                              color: shadowColor.withOpacity(0.8),
                               blurRadius: 10.0,
                               spreadRadius: 2.0,
                               offset: Offset(0.0, 0.0),
@@ -122,7 +121,9 @@ class Home extends StatelessWidget {
                     ),
                     SizedBox(height: 20.0),
                     RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/login");
+                      },
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       ),

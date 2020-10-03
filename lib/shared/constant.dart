@@ -30,10 +30,10 @@ const MaterialColor primaryColorMaterial = MaterialColor(
 );
 
 // Theme color
-const Color primaryColor = Color(0xFF98C429);
-const Color blueColor = Color(0xFF00D3EE);
+const Color primaryColor = Color(0xFF00C0C5);
+const Color blueColor = Color(0xFF3A67BA);
 const Color pinkColor = Color(0xFF9C27B0);
-const Color grayColor = Color(0xFF999999);
+const Color grayColor = Color(0xFFD2D2D2);
 const Color greenColor = Color(0xFF03A74E);
 
 const Color whiteColor = Color(0xFFFFFFFF);
