@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartcode/widgets/curve_clipper.dart';
 
-import '../shared/constant.dart';
+import "package:smartcode/shared/constant.dart";
+// import '../shared/constant.dart';
 
 bool _showPassword = false;
 
@@ -16,12 +17,6 @@ class _SigninState extends State<Signin> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topLeft, end: Alignment.bottomCenter,
-                // colors: [Color(0xFFCED7e2), Color(0xFFFFFFFF)]),
-                colors: [Color(0xFFFFFF), Color(0xFFFFFFFF)]),
-          ),
           height: MediaQuery.of(context).size.height,
           child: Column(
             children: [
@@ -31,15 +26,17 @@ class _SigninState extends State<Signin> {
                   height: 300.0,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xFF00C0C5),
+                      // color: Color(0xFF00C0C5),
+                      // color: Colors.orange,
+
+                      ),
+                  child: Image.asset(
+                    "images/login.png",
+                    // "images/login.png",
+                    height: MediaQuery.of(context).size.height / 2.5,
+                    // fit: BoxFit.cover,
+                    width: 200,
                   ),
-                  // child: Image.asset(
-                  //   "images/play.png",
-                  //   // "images/login.png",
-                  //   height: MediaQuery.of(context).size.height / 2.5,
-                  //   // fit: BoxFit.cover,
-                  //   width: 200,
-                  // ),
                 ),
               ),
               SizedBox(

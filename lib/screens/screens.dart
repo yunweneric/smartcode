@@ -1,7 +1,7 @@
 export "Admission.dart";
 export "Dashboard.dart";
 export "Home.dart";
-export "Newapplication.dart";
+export 'NewApplication.dart';
 export "Parents.dart";
 export "Payfee.dart";
 export "Profile.dart";
