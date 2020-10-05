@@ -5,6 +5,7 @@ import 'package:smartcode/screens/Done.dart';
 import 'package:smartcode/screens/NewAdmission.dart';
 import 'package:smartcode/screens/NewDocuments.dart';
 import 'package:smartcode/screens/NewParents.dart';
+import 'package:smartcode/screens/NewPayfee.dart';
 import 'package:smartcode/screens/NewProfile.dart';
 import 'package:smartcode/screens/NewQualification.dart';
 import 'package:smartcode/screens/Profilebar.dart';
@@ -57,7 +58,10 @@ Route geneateRoute(RouteSettings settings) {
     case '/Dashboard':
       return MaterialPageRoute<Widget>(builder: (context) => Dashboard());
 
-    case '/Payfee':
+    case '/NewPayfee':
+      return MaterialPageRoute<Widget>(builder: (context) => NewPayfee());
+
+    case '/Newfee':
       return MaterialPageRoute<Widget>(builder: (context) => Payfee());
 
     case '/Profile':

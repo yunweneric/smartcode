@@ -117,7 +117,7 @@ class _PayfeeState extends State<Payfee> {
                   ],
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/NewApplication');
+                  Navigator.pushNamed(context, '/NewPayfee');
                 },
               ),
             ),
