@@ -9,7 +9,7 @@ class MainDrawer6 extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 100.0,
+              height: 150.0,
               color: primaryColor,
               width: double.infinity,
               child: Row(
@@ -161,9 +161,7 @@ class MainDrawer6 extends StatelessWidget {
               child: RaisedButton(
                 color: Colors.orange,
                 onPressed: () {
-                  // Navigator.pushNamed(context, '/Done');
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, '/Done', (route) => false);
+                  Navigator.pushNamed(context, '/Done');
                 },
                 child: Center(
                   child: Text(

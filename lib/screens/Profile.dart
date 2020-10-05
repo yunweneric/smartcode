@@ -30,7 +30,9 @@ class _ProfileState extends State<Profile> {
                 itemBuilder: (context) => [
                   PopupMenuItem(
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/Application');
+                      },
                       child: Row(
                         // mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -48,7 +50,9 @@ class _ProfileState extends State<Profile> {
                   ),
                   PopupMenuItem(
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/');
+                      },
                       child: Row(
                         // mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -86,7 +90,9 @@ class _ProfileState extends State<Profile> {
                   ),
                   PopupMenuItem(
                     child: FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/');
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [

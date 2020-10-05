@@ -8,9 +8,8 @@ class NewPayfee extends StatefulWidget {
 class _NewPayfeeState extends State<NewPayfee> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: SafeArea(
+    return Container(
       child: Text("Payfee"),
-    ));
+    );
   }
 }

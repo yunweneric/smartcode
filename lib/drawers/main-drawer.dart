@@ -145,7 +145,9 @@ class MainDrawer extends StatelessWidget {
               height: 50.0,
               child: RaisedButton(
                 color: Colors.orange,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/Done');
+                },
                 child: Center(
                   child: Text(
                     'PAY & SUBMIT ALL',

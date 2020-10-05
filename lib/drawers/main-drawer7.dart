@@ -9,7 +9,7 @@ class MainDrawer7 extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 100.0,
+              height: 150.0,
               color: primaryColor,
               width: double.infinity,
               child: Row(

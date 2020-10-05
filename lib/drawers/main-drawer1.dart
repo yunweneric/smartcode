@@ -9,7 +9,7 @@ class MainDrawer1 extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 100.0,
+              height: 150.0,
               color: primaryColor,
               width: double.infinity,
               child: Row(
@@ -147,7 +147,9 @@ class MainDrawer1 extends StatelessWidget {
               height: 50.0,
               child: RaisedButton(
                 color: Colors.orange,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/Done');
+                },
                 child: Center(
                   child: Text(
                     'PAY & SUBMIT ALL',

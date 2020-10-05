@@ -6,26 +6,110 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: primaryColor,
-        automaticallyImplyLeading: false,
-        title: Text("SCHOLAR"),
-      ),
-      /*  endDrawer: Drawer(
-        child: DrawerHeader(
-          child: Column(
-            children: [
-              ListTile(
-                title: Text("Sign in"),
-                onTap: () => Navigator.pushNamed(context, "/login"),
+          backgroundColor: primaryColor,
+          title: Center(
+            child: Text(
+              'SCHOLAR',
+              style: TextStyle(
+                letterSpacing: 1.2,
+                fontSize: 28.0,
               ),
-              ListTile(
-                title: Text("Register"),
-                onTap: () => Navigator.pushNamed(context, "/register"),
-              ),
-            ],
+            ),
           ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: PopupMenuButton(
+                itemBuilder: (context) => [
+                  PopupMenuItem(
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/Application');
+                      },
+                      child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.school,
+                            color: Colors.black45,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Text('ADMISSIONS'),
+                        ],
+                      ),
+                    ),
+                  ),
+                  PopupMenuItem(
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/');
+                      },
+                      child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.home,
+                            color: Colors.black45,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Text('HOME'),
+                        ],
+                      ),
+                    ),
+                  ),
+                  PopupMenuItem(
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/Profilebar');
+                      },
+                      child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.person,
+                            color: Colors.black45,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Text('PROFILE'),
+                        ],
+                      ),
+                    ),
+                  ),
+                  PopupMenuItem(
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/');
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.lock,
+                            color: Colors.black45,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Text('SIGN OUT'),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+                child: Icon(
+                  Icons.more_vert,
+                  size: 30,
+                ),
+              ),
+            ),
+          ],
         ),
-      ), */
       body: Center(
         child: Container(
           child: Column(

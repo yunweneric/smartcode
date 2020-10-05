@@ -117,7 +117,7 @@ class _ParentsState extends State<Parents> {
                   ],
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/NewWorkexperience');
+                  Navigator.pushNamed(context, '/NewParents');
                 },
               ),
             ),

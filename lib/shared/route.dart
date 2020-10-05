@@ -61,7 +61,7 @@ Route geneateRoute(RouteSettings settings) {
     case '/NewPayfee':
       return MaterialPageRoute<Widget>(builder: (context) => NewPayfee());
 
-    case '/Newfee':
+    case '/Payfee':
       return MaterialPageRoute<Widget>(builder: (context) => Payfee());
 
     case '/Profile':
