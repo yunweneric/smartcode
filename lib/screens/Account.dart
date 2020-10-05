@@ -1,15 +1,15 @@
-import "package:flutter/material.dart";
-import 'package:flutter/rendering.dart';
+import 'package:flutter/material.dart';
 import 'package:smartcode/drawers/main-drawer8.dart';
 import 'package:smartcode/shared/constant.dart';
 
-class Profilebar extends StatefulWidget {
+class Account extends StatefulWidget {
   @override
-  _ProfilebarState createState() => _ProfilebarState();
+  _AccountState createState() => _AccountState();
 }
 
-class _ProfilebarState extends State<Profilebar> {
-  int _value = 1;
+bool _showPassword = false;
+
+class _AccountState extends State<Account> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -148,6 +148,7 @@ class _ProfilebarState extends State<Profilebar> {
                     vertical: 10.0,
                   ),
                   child: TextField(
+                    keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
@@ -162,9 +163,9 @@ class _ProfilebarState extends State<Profilebar> {
                       contentPadding: EdgeInsets.symmetric(vertical: 15.0),
                       fillColor: Colors.white,
                       filled: true,
-                      hintText: "Name",
+                      hintText: "Email",
                       prefixIcon: Icon(
-                        Icons.account_circle,
+                        Icons.mail,
                         size: 30.0,
                         color: Color(0xFF00C0C5),
                       ),
@@ -195,9 +196,9 @@ class _ProfilebarState extends State<Profilebar> {
                       contentPadding: EdgeInsets.symmetric(vertical: 15.0),
                       fillColor: Colors.white,
                       filled: true,
-                      hintText: "Email(Public)",
+                      hintText: "Username",
                       prefixIcon: Icon(
-                        Icons.mail,
+                        Icons.account_circle,
                         size: 30.0,
                         color: Color(0xFF00C0C5),
                       ),
@@ -213,7 +214,7 @@ class _ProfilebarState extends State<Profilebar> {
                     vertical: 0.0,
                   ),
                   child: TextField(
-                    keyboardType: TextInputType.emailAddress,
+                    keyboardType: TextInputType.visiblePassword,
                     decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
@@ -228,13 +229,31 @@ class _ProfilebarState extends State<Profilebar> {
                       contentPadding: EdgeInsets.symmetric(vertical: 15.0),
                       fillColor: Colors.white,
                       filled: true,
-                      hintText: "Website",
+                      hintText: "New Password",
+                      suffixIcon: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            _showPassword = !_showPassword;
+                          });
+                        },
+                        child: Icon(
+                          // Icons.visibility,
+                          _showPassword
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          size: 30,
+                          color: Color(0xFF00C0C5),
+                        ),
+                      ),
                       prefixIcon: Icon(
-                        Icons.web,
+                        Icons.lock,
                         size: 30.0,
                         color: Color(0xFF00C0C5),
                       ),
+
+                      // suffixIcon: Icon()
                     ),
+                    obscureText: !_showPassword,
                   ),
                 ),
                 SizedBox(
@@ -246,6 +265,7 @@ class _ProfilebarState extends State<Profilebar> {
                     vertical: 0.0,
                   ),
                   child: TextField(
+                    keyboardType: TextInputType.visiblePassword,
                     decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
@@ -260,115 +280,35 @@ class _ProfilebarState extends State<Profilebar> {
                       contentPadding: EdgeInsets.symmetric(vertical: 15.0),
                       fillColor: Colors.white,
                       filled: true,
-                      hintText: "Location",
-                      prefixIcon: Icon(
-                        Icons.location_city,
-                        size: 30.0,
-                        color: Color(0xFF00C0C5),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0,
-                    vertical: 0.0,
-                  ),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: grayColor,
-                        ),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
+                      hintText: "Current Password",
+                      suffixIcon: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            _showPassword = !_showPassword;
+                          });
+                        },
+                        child: Icon(
+                          // Icons.visibility,
+                          _showPassword
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          size: 30,
                           color: Color(0xFF00C0C5),
                         ),
                       ),
-                      contentPadding: EdgeInsets.symmetric(vertical: 15.0),
-                      fillColor: Colors.white,
-                      filled: true,
-                      hintText: "Gravatar Email",
                       prefixIcon: Icon(
-                        Icons.email,
+                        Icons.lock,
                         size: 30.0,
                         color: Color(0xFF00C0C5),
                       ),
+
+                      // suffixIcon: Icon()
                     ),
+                    obscureText: !_showPassword,
                   ),
                 ),
                 SizedBox(
-                  height: 20.0,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0,
-                    vertical: 0.0,
-                  ),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: grayColor,
-                        ),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0xFF00C0C5),
-                        ),
-                      ),
-                      contentPadding: EdgeInsets.symmetric(vertical: 15.0),
-                      fillColor: Colors.white,
-                      filled: true,
-                      hintText: "Bio",
-                      prefixIcon: Icon(
-                        Icons.account_box,
-                        size: 30.0,
-                        color: Color(0xFF00C0C5),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                Container(
-                  width: 200,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: primaryColor,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: Center(
-                      child: DropdownButton(
-                          // style: TextStyle(color: Colors.white),
-                          value: _value,
-                          items: [
-                            DropdownMenuItem(
-                              child: Text(
-                                "Time Zone",
-                              ),
-                              value: 1,
-                            ),
-                            DropdownMenuItem(
-                              child: Text("GMT+0"),
-                              value: 2,
-                            ),
-                            DropdownMenuItem(child: Text("GMT+1"), value: 3),
-                            DropdownMenuItem(child: Text(" GMT+2"), value: 4)
-                          ],
-                          onChanged: (value) {
-                            setState(() {
-                              _value = value;
-                            });
-                          }),
-                    ),
-                  ),
+                  height: 50.0,
                 ),
                 SizedBox(
                   height: 10.0,
@@ -380,7 +320,7 @@ class _ProfilebarState extends State<Profilebar> {
                   ),
                   child: FlatButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/Profilebar');
+                      Navigator.pushNamed(context, '/Account');
                     },
                     child: Text(
                       "Save",

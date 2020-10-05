@@ -29,35 +29,83 @@ class _ParentsState extends State<Parents> {
               child: PopupMenuButton(
                 itemBuilder: (context) => [
                   PopupMenuItem(
-                    child: Row(
-                      children: [
-                        Text('HOME'),
-                      ],
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/Application');
+                      },
+                      child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.school,
+                            color: Colors.black45,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Text('ADMISSIONS'),
+                        ],
+                      ),
                     ),
                   ),
                   PopupMenuItem(
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.person,
-                          color: Colors.black45,
-                        ),
-                        Text('ADMISSIONS'),
-                      ],
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/');
+                      },
+                      child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.home,
+                            color: Colors.black45,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Text('HOME'),
+                        ],
+                      ),
                     ),
                   ),
                   PopupMenuItem(
-                    child: Row(
-                      children: [
-                        Text('PROFILE'),
-                      ],
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/Profilebar');
+                      },
+                      child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.person,
+                            color: Colors.black45,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Text('PROFILE'),
+                        ],
+                      ),
                     ),
                   ),
                   PopupMenuItem(
-                    child: Row(
-                      children: [
-                        Text('SIGN OUT'),
-                      ],
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/');
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Icon(
+                            Icons.lock,
+                            color: Colors.black45,
+                          ),
+                          SizedBox(
+                            width: 10.0,
+                          ),
+                          Text('SIGN OUT'),
+                        ],
+                      ),
                     ),
                   ),
                 ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartcode/drawers/main-drawer7.dart';
 // import 'package:smartcode/drawers/main-drawer7.dart';
 import 'package:smartcode/shared/constant.dart';
 
@@ -181,7 +182,7 @@ class _DoneState extends State<Done> {
             ),
           ],
         ),
-        // drawer: MainDrawer7(),
+        drawer: MainDrawer7(),
       ),
     );
   }

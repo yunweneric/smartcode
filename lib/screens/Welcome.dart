@@ -42,8 +42,11 @@ class _WelcomeState extends State<Welcome> {
                     ),
                   ),
                 ),
-                Image.asset("images/login2.png"),
-                Container(  
+                Image.asset(
+                  "images/log.png",
+                  width: 300,
+                ),
+                Container(
                   height: 45.0,
                   width: 150,
                   child: FlatButton(

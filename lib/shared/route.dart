@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:smartcode/screens/Account.dart';
 import 'package:smartcode/screens/Application.dart';
 import 'package:smartcode/screens/Documents.dart';
 import 'package:smartcode/screens/Done.dart';
+import 'package:smartcode/screens/Networks.dart';
 import 'package:smartcode/screens/NewAdmission.dart';
 import 'package:smartcode/screens/NewDocuments.dart';
 import 'package:smartcode/screens/NewParents.dart';
@@ -91,6 +93,12 @@ Route geneateRoute(RouteSettings settings) {
 
     case '/Profilebar':
       return MaterialPageRoute<Widget>(builder: (context) => Profilebar());
+
+    case '/Account':
+      return MaterialPageRoute<Widget>(builder: (context) => Account());
+
+    case '/Networks':
+      return MaterialPageRoute<Widget>(builder: (context) => Networks());
 
     default:
       return MaterialPageRoute<Widget>(builder: (context) => Home());

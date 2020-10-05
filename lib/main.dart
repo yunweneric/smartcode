@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         //primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: '/Welcome',
+      initialRoute: '/Home',
       onGenerateRoute: geneateRoute,
     );
   }

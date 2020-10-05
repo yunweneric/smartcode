@@ -20,6 +20,99 @@ class _NewWorkexperience extends State<NewWorkexperience> {
         backgroundColor: primaryColor,
         // title: Text('$_formateddate'),
         title: Text('New Work Experience'),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: PopupMenuButton(
+              itemBuilder: (context) => [
+                PopupMenuItem(
+                  child: FlatButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/Application');
+                    },
+                    child: Row(
+                      // mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.school,
+                          color: Colors.black45,
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Text('ADMISSIONS'),
+                      ],
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: FlatButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/');
+                    },
+                    child: Row(
+                      // mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.home,
+                          color: Colors.black45,
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Text('HOME'),
+                      ],
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: FlatButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/Profilebar');
+                    },
+                    child: Row(
+                      // mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.person,
+                          color: Colors.black45,
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Text('PROFILE'),
+                      ],
+                    ),
+                  ),
+                ),
+                PopupMenuItem(
+                  child: FlatButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/');
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.lock,
+                          color: Colors.black45,
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Text('SIGN OUT'),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+              child: Icon(
+                Icons.more_vert,
+                size: 30,
+              ),
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(

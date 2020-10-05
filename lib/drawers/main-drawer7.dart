@@ -137,17 +137,15 @@ class MainDrawer7 extends StatelessWidget {
                 Navigator.pushNamed(context, '/Payfee');
               },
               child: Card(
-                color: primaryColor,
                 child: ListTile(
                   leading: Icon(
                     Icons.folder,
-                    color: Colors.white,
+                    color: Colors.green,
                   ),
                   title: Text(
                     'APPLICATION FEES(REQUIRED)',
                     style: TextStyle(
-                      color: Colors.white,
-                    ),
+                        ),
                   ),
                 ),
               ),
@@ -159,7 +157,7 @@ class MainDrawer7 extends StatelessWidget {
               width: 200.0,
               height: 50.0,
               child: RaisedButton(
-                color: Colors.orange,
+                color: primaryColor,
                 onPressed: () {
                   Navigator.pushNamed(context, '/Done');
                 },
