@@ -9,5 +9,5 @@ export "Qualifications.dart";
 export "Signin.dart";
 export "Signup.dart";
 export "Summary.dart";
-export "Workexperiece.dart";
+export 'Workexperience.dart';
 export "send_message.dart";

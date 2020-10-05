@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class NewQualification extends StatefulWidget {
+class NewWorkexperience extends StatefulWidget {
   @override
-  _NewQualificationState createState() => _NewQualificationState();
+  _NewWorkexperienceState createState() => _NewWorkexperienceState();
 }
 
-class _NewQualificationState extends State<NewQualification> {
+class _NewWorkexperienceState extends State<NewWorkexperience> {
   @override
   Widget build(BuildContext context) {
     return Container();

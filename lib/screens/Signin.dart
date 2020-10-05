@@ -26,17 +26,16 @@ class _SigninState extends State<Signin> {
                   height: 300.0,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                      // color: Color(0xFF00C0C5),
-                      // color: Colors.orange,
-
-                      ),
-                  child: Image.asset(
-                    "images/login.png",
-                    // "images/login.png",
-                    height: MediaQuery.of(context).size.height / 2.5,
-                    // fit: BoxFit.cover,
-                    width: 200,
+                    color: Color(0xFF00C0C5),
+                    // color: Colors.orange,
                   ),
+                  // child: Image.asset(
+                  //   "images/login.png",
+                  //   // "images/login.png",
+                  //   height: MediaQuery.of(context).size.height / 2.5,
+                  //   // fit: BoxFit.cover,
+                  //   width: 200,
+                  // ),
                 ),
               ),
               SizedBox(
@@ -133,8 +132,7 @@ class _SigninState extends State<Signin> {
                   //     builder: (_) => HomeScreen(),
                   //   ),
                   // );
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, "/home", (route) => false);
+                  Navigator.pushNamed(context, "/Profile");
                   // Navigator.pushNamedAndRemoveUntil(context, "/home");
                 },
                 child: Container(

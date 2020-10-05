@@ -9,7 +9,7 @@ Future<void> main() async {
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
   );
-  // Modifying default system toolbar and system bar colors
+  // Modifying default system toolbar and navigation bar colors
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(
       systemNavigationBarIconBrightness: Brightness.light,
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         //primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: '/',
+      initialRoute: '/Welcome',
       onGenerateRoute: geneateRoute,
     );
   }
