@@ -1,16 +1,16 @@
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:smartcode/shared/route.dart';
-import 'package:device_preview/device_preview.dart';
+// import 'package:device_preview/device_preview.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  //only portrait
-  // await SystemChrome.setPreferredOrientations(
-  //   [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
-  // );
+  // only portrait
+  await SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+  );
   // Modifying default system toolbar and navigation bar colors
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(
@@ -20,14 +20,14 @@ Future<void> main() async {
       systemNavigationBarColor: Color(0xFF00C0C5),
     ),
   );
-  runApp(
-    DevicePreview(
-      enabled: !kReleaseMode,
-      builder: (context) => MyApp(),
-    ),
-  );
+  // runApp(
+  //   DevicePreview(
+  //     enabled: !kReleaseMode,
+  //     builder: (context) => MyApp(),
+  //   ),
+  // );
 
-  // runApp(MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -35,8 +35,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: DevicePreview.of(context).locale, // <--- /!\ Add the locale
-      builder: DevicePreview.appBuilder,
+      // locale: DevicePreview.of(context).locale, // <--- /!\ Add the locale
+      // builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       title: 'Scholar',
       theme: ThemeData(
